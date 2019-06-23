@@ -1,0 +1,15 @@
+{% extends "register/layout.html" %}
+
+{% block content %}
+	{% if user.is_authenticated %}
+		<p>Hello, {{ user.username }}</p>
+		<div>
+			<a href="{% url 'register:myaccount' %}" >Account</a>
+			<br>
+			<a href="{% url 'register:logout_user' %}" >Sign out</a>
+		</div>
+	{% else %}
+		<a class="lead" href="{% url 'register:login_user' %}">login</a>
+	{% endif %}
+	<div class="clearfix"> </div>
+{% endblock %}

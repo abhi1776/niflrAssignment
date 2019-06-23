@@ -1,0 +1,16 @@
+{% extends 'register/layout.html' %}
+{% block title %}My Account{% endblock %}
+<!--{% block login_active %}active{% endblock %}-->
+ {% load staticfiles %}
+ {% block content %}
+<div class="col-xs-6 published" style="margin:12vh;">
+    <div style="line-height:44px;font-size:1.7em;font-weight:bold;margin-left:24vh;">
+        <span>User name: {{ user.username }}</span><br>
+	<span>FirstName: {{ u.firstname }}</span><br>
+        <span>LastName: {{ u.lastname }}</span><br>
+        <span>Email: {{ user.email }}</span><br>
+        <span>Phone No.: {{ u.mobile_number }}</span><br>
+	<span>DateOfBirth: {{ u.birthdate }} </span><br>
+    </div>
+</div>
+{% endblock %}
